@@ -1,0 +1,158 @@
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  min-height: 75px;
+  padding: 12px 5%;
+  background: var(--card-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 3px 12px var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+
+/* LOGO */
+
+.navbar-logo {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text-color);
+  text-decoration: none;
+  letter-spacing: -1px;
+}
+
+.navbar-logo span {
+  color: var(--primary);
+}
+
+/* NAVIGATION LINKS */
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover,
+.navbar-links a.active {
+  color: var(--primary);
+}
+
+/* REGISTER BUTTON */
+
+.navbar-links .register-btn {
+  background: var(--primary);
+  color: white;
+  padding: 10px 18px;
+  border-radius: 7px;
+}
+
+.navbar-links .register-btn:hover {
+  opacity: 0.85;
+  color: white;
+}
+
+/* USER EMAIL */
+
+.user-email {
+  color: var(--text-color);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* LOGOUT BUTTON */
+
+.logout-btn {
+  background: #c0395b;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.logout-btn:hover {
+  background: #a52c49;
+}
+
+/* THEME TOGGLE */
+
+.theme-toggle {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 7px;
+  padding: 9px 14px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  background: var(--primary);
+  color: white;
+}
+
+/* MOBILE MENU BUTTON */
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-color);
+  font-size: 27px;
+  cursor: pointer;
+}
+
+/* TABLET AND MOBILE */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    flex-wrap: wrap;
+    padding: 12px 5%;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 20px 0 10px;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links a {
+    width: 100%;
+  }
+
+  .theme-toggle {
+    width: 100%;
+  }
+
+  .logout-btn {
+    width: 100%;
+  }
+}
